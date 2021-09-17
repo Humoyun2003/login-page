@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Login</title>
+</head>
+<body>
+    <form action="index.html" class="box" method="post">
+        <h1>Login</h1>
+        <input type="text" name="" placeholder="Email">
+        <input type="password" name="" placeholder="Password" class="password" id="password">
+        <input type="submit" name="" value="Login">
+        <div id="toggle" onclick="showHide();"></div>
+    </form>
+    <script type="text/javascript">
+        const password = document.getElementById('password');
+        const toggle = document.getElementById('toggle');
+
+        function showHide() {
+            if (password.type === 'password') {
+                password.setAttribute('type', 'text');
+                toggle.classList.add('hide');
+            }
+            else {
+                password.setAttribute('type', 'password');
+                toggle.classList.remove('hide');
+            }
+        }
+    </script>
+</body>
+</html>
